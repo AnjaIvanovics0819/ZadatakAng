@@ -1,0 +1,37 @@
+<body>
+  
+
+<p>Zadatak 1.</p>
+<table class="table">
+  <thead class="thead-dark">
+    <tr class="table-dark" >
+      <th  >Name</th >
+      <th  >Time</th >
+        <th>Action</th>
+     
+    
+    </tr>
+  </thead>
+  <tbody>
+    <tr [ngStyle]="{'background-color':employee.y > 100 ? '#F4AD9C' : 'white' }" *ngFor="let employee of employees" >
+     
+      <td >{{employee.name}}</td>
+      <td >{{employee.y}}</td>
+      <td><button type="button" class="btn btn-light">Edit</button></td>
+
+
+        
+
+    
+    </tr>
+
+
+   
+  </tbody>
+ 
+</table>
+
+<div>
+  <canvasjs-chart [options]="chartOptions" [styles]="{width: '100%', height:'360px'}" (chartInstance)="getChartInstance($event)"></canvasjs-chart>    
+</div>                        
+</body>
